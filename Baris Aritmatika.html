@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Baris Aritmatika</title>
+	<link rel="icon" type="image/x-icon" href="logo uin.png">
+</head>
+<body style="background-image: url(aesthetic2.jpg); background-size: cover;">
+	<h1 style="color:white;"><marquee> Jangan lupa berdoa, usaha jalur langit lebih memuaskan daripada jalur dukun&#128511;</marquee></h1>
+	<p style="color : white;">Silahkan naikkan volume agar dapat mendengarkan lagu ini &#128513;</p>
+	<audio controls loop>
+  <source src="Tabassam.mp3" type="audio/mpeg">
+</audio>
+	<br>
+	
+<p style="color: white;">Silahkan Masukkan Nama Anda : <input type="text" id="nama"><input type="button" value="kirim" onclick="fungsi()"></p>
+<script type="text/javascript">
+	function fungsi() {
+		var n = document.getElementById('nama').value;
+		alert("Hai!!! Semoga harimu berkah. Fi Amanillah " + n  )
+	}
+</script>
+<center><h1 style="color: white;">&#128511; Baris Aritmatika&#128511;</h1>
+<h2 style="color: white;">Pengertian Baris Aritmatika</h2>
+<p style="color: white;"><b>Barisan aritmatika</b> adalah barisan atau urutan bilangan yang memiliki selisih tetap. Contohnya seperti urutan bilangan 1, 3, 5, 7, 9, 11, 13, 15, dan seterusnya. Jika diperhatikan, selisih antarbilangannya selalu tetap, yaitu 2. Selisih pada barisan aritmatika disebut sebagai beda atau dinyatakan secara matematis sebagai <i>b</i>. Setiap bilangan yang menyusun barisan disebut suku atau dinyatakan sebagai U<sub>n</sub> . Misalnya, 1 = suku ke-1 (U<sub>1</sub>), 3 = suku ke-2 (U<sub>2</sub>), 5 = suku ke-3 (U<sub>3</sub>), dan seterusnya. Sementara itu, suku pertama (U<sub>1</sub>) pada barisan dinyatakan secara matematis sebagai <i>a</i>.</p></center>
+<br>
+<center><p style="color: white;">Rumus umum baris aritmatika adalah <br> <b>U<sub>n</sub>= <i>a</i> + (n-1)<i>b</i></b></p>
+ <label style="color:white;" for="a">Suku Pertama : </label>
+    <input type="number" id="a" required><br>
+    <br>
+    <label style="color:white;" for="b">Selisih : </label>
+    <input type="number" id="b" required><br>
+    <br>
+    <label style="color:white;" for="n">Suku ke-n: </label>
+    <input type="number" id="n" required><br><br>
+    <button onclick="hitungSuku()">Hitung</button>
+
+    <script>
+        function hitungSuku() {
+            // Mendapatkan nilai dari input
+            var sukuPertama = parseFloat(document.getElementById("a").value);
+            var selisih = parseFloat(document.getElementById("b").value);
+            var n = parseInt(document.getElementById("n").value);
+
+            // Validasi input
+            if (isNaN(sukuPertama) || isNaN(selisih) || isNaN(n) || n <= 0) {
+                alert("Pastikan semua input valid dan n lebih dari 0.");
+                return;
+            }
+
+            // Menghitung suku ke-n menggunakan rumus a_n = a_1 + (n-1) * b
+            var sukuKeN = sukuPertama + (n - 1) * selisih;
+
+            // Menampilkan hasil
+            alert("Suku ke-" + n + " adalah: " + sukuKeN);
+        }
+    </script>
+    </center>
+   <center> <h1 style="color:white;">&#128511;Deret Aritmatika&#128511;</h1>
+    <h2 style="color:white;">Pengertian Deret Aritmatika</h2>
+    <p style="color:white;"><b>Deret aritmatika</b> adalah jumlah <i>n</i> suku pertama (<i>Sn</i>) dari barisan aritmatika. Ciri deret aritmatika adalah suku-suku bilangan yang dijumlahkan memiliki selisih tetap. Contohnya adalah 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + …, dan seterusnya. </p></center>
+    <br>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <center><p style="color: white;">Rumus umum deret aritmatika adalah<br> $$ S_n = \frac{n}{2} \cdot (2a + (n-1)b) $$</p></center>
+<br><center>
+        <label style="color:white;" for="a">Suku Pertama : </label>
+        <input type="number" id="a" required><br><br>
+
+        <label style="color:white;" for="b">Selisih : </label>
+        <input type="number" id="b" required><br><br>
+
+        <label style="color:white;" for="n">Jumlah Suku ke-</label>
+        <input type="number" id="n" required><br><br>
+
+        <button onclick="HitungJumlahSuku()">Hitung</button>
+    </center>
+
+    <script>
+        function HitungJumlahSuku() {
+            // Mendapatkan nilai dari input
+            var a = parseFloat(document.getElementById("a").value); // Suku Pertama
+            var b = parseFloat(document.getElementById("b").value); // Selisih
+            var n = parseInt(document.getElementById("n").value); // Jumlah Suku ke-n
+
+            // Validasi input
+            if (isNaN(a) || isNaN(b) || isNaN(n) || n <= 0) {
+                alert("Pastikan semua input valid dan n lebih dari 0.");
+                return;
+            }
+
+            // Menghitung jumlah suku deret aritmatika
+            var jumlah = (n / 2) * (2 * a + (n - 1) * b);
+
+            // Menampilkan hasil dalam popup
+            alert("Jumlah deret aritmatika adalah: " + jumlah);
+        }
+    </script>
+</body>
+</html>
